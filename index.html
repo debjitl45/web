@@ -10,22 +10,27 @@
 
     <div class="col s12 m4 l2">
     	<div class="row">
-    <form class="col s12">
+    <form class="col s12" method="submit">
       <div class="row" style="padding-top: 100px">
         <div class="input-field col s6">
           <input placeholder="Placeholder" id="name" type="text" class="validate">
           <label for="first_name">Name</label>
         </div>
       </div>
-      <button class="btn btn-success">Submit</button>
     </form>
+    <button class="btn btn-success" onclick="print();" style="padding-right: 20px">Submit</button>
   </div>
     </div>
-    <div class="col s12 m4 l8"><p style="padding-top: 100px">
-    	center field
+    <div class="col s12 m4 l8"><p style="padding-top: 100px" id="output">	
     </p></div>
     <div class="col s12 m4 l2"><p style="padding-top: 100px">Right field</p></div>
     </div>        
-<script type="text/javascript" src="script.js"></script>
+<script>
+	function print()
+{
+	var text=document.getElementById("name").value;
+	document.getElementById( "output").innerHTML = text; 
+}
+</script>
 </body>
 </html>
